@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dharamvir Kumar - Competitive Programmer - Software Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/fb76f564b5.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="" alt=""  class="logo">    <!--   LOGO Image  -->
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#Projects">Projects</a></li>
+                    <li><a href="#blogs">Blog</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-regular fa-square-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <b><p>Competitive Programmer - Software Developer</p></b>
+                <h1>Hi, I'm <span>Dharamvir</span><br> From India</h1>
+                
+                
+            </div>
+        </div>
+
+    </div>
+
+    <!--    About Section -->
+
+    <div id="about">   
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Images/me.jpg" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About me</h1>
+                    <p>Hi,I am Dharamvir<br>Currently i am pursuing B.tech CSE.<br> I am a 3rd year student of CVRU Bihar.<br>
+                        I am very passionate about programming, so i do Competitive programming and also Web Development.</p>
+
+
+                    <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('Education')">Education</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="Skills">
+                        <ul>
+                            <li><span>Programming Languages</span><br>C - C++ - JAVA - Kotlin - React - Python - Java Script</li>
+                            <li><span>Web Development</span><br>Made Several Projects in Web Development using MERN Stack & MEAN Stack</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li><span>B.tech CSE - </span><br>3rd Year Student of CVRU Bihar</li>
+                           
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- -------------------------------------  Projects ----------------------------------- -->
+
+<div id="Projects">
+    <div class="container">
+        <h1 class="sub-title">Projects</h1>
+        <div class="Projects-list">
+            <div>
+                <h2>Demo Project - 1</h2>
+                <!-- <p>Demo Project - 1</p> -->
+            </div>
+
+            <div>
+                <h2>Demo Project - 2</h2>
+                <!-- <p>Demo Project - 2</p> -->
+            </div>
+
+
+
+        </div>
+    </div>
+</div>
+
+
+<!-- -------------------------------------  Blogs ----------------------------------- -->
+
+<div id="blogs">
+    <div class="container">
+        <h1 class="sub-title">Blogs</h1>
+        <div class="Blog-List">
+            <div class="Blog">
+                <img src="Images/1.jpg" alt="Blog Image">
+                <div class="layer">
+                    <h3>Demo Blog - 1</h3>
+                </div>
+            </div>
+            <div class="Blog">
+                <img src="Images/1.jpg" alt="Blog Image">
+                <div class="layer">
+                    <h3>Demo Blog - 2</h3>
+                </div>
+            </div>
+            <div class="Blog">
+                <img src="Images/1.jpg" alt="Blog Image">
+                <div class="layer">
+                    <h3>Demo Blog - 3</h3>
+                </div>
+            </div>
+            <div class="Blog">
+                <img src="Images/1.jpg" alt="Blog Image">
+                <div class="layer">
+                    <h3>Demo Blog - 4</h3>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">Read more</a>
+
+    </div>
+</div>
+
+
+<!-- ---------------------------------------------------Contact----------------------------------------------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i> muzaffarpurshikha@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> 8709513658</p>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright <i-i1 class="fa-solid fa-copyright"></i-i1> Dharamvir.Made with <i class="fa-solid fa-heart"></i> by Dharamvir.</p>
+    </div>
+</div>
+
+
+
+
+  <script>
+           var tablinks = document.getElementsByClassName("tab-links");
+           var tabcontents = document.getElementsByClassName("tab-contents");
+
+           function opentab(tabname){
+                for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+
+           }
+  </script>
+   
+   
+   <script>
+    var sidemenu = document.getElementById("sidemenu")
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+
+
+
+   </script>
+
+
+  
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbz1xo48dJMbzC2K7-EKOCONyKukElqr0mHlTJ-bc8PGH5NWUKYVqCxnxfApS96un3Vr/exec'
+    const form = document.forms['submit-to-google-sheet']
+
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+
+
+</body>
+</html>
